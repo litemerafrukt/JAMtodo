@@ -64,7 +64,6 @@ export default function Dashboard(props) {
           </NavLink>
         )}
       </Flex>
-      <span>Dash {user?.user_metadata.full_name}</span>
       <Flex as="form" onSubmit={handleFormSubmit}>
         <Label sx={{ display: "flex", alignItems: "center" }}>
           <span>Add&nbsp;todo</span>
@@ -79,8 +78,9 @@ export default function Dashboard(props) {
               as="li"
               key={todo.id}
               onClick={() => send({ type: "TOGGLE", id: todo.id })}
+              sx={{ cursor: "pointer" }}
             >
-              <Checkbox checked={todo.done} />
+              <Checkbox checked={todo.done} onChange={() => {}} />
               <span>{todo.description}</span>
             </Flex>
           ))}
