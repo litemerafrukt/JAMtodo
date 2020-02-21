@@ -14,9 +14,13 @@ const IdentityProvider = props => {
 
   netlifyIdentity.on("login", user => {
     setUser(user)
+    netlifyIdentity.close()
   })
 
-  netlifyIdentity.on("logout", () => setUser())
+  netlifyIdentity.on("logout", () => {
+    setUser()
+    netlifyIdentity.close()
+  })
 
   return (
     <IdentityContext.Provider value={{ identity: netlifyIdentity, user }}>
