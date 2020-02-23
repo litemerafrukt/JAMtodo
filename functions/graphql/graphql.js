@@ -12,7 +12,7 @@ const typeDefs = gql`
   }
   type Mutation {
     addTodo(description: String!): Todo
-    toggleDone(id: !ID): Todo
+    toggleDone(id: ID!): Todo
   }
 `
 
