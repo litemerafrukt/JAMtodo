@@ -331,6 +331,14 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-syntax-optional-chaining" "^7.8.0"
 
+"@babel/plugin-proposal-pipeline-operator@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-pipeline-operator/-/plugin-proposal-pipeline-operator-7.8.3.tgz#c3569228e7466f91bfff7f1c1ae18fb5d36b3097"
+  integrity sha512-Z0qV3aUYoLUAnVLdfLTlz/GJYfcrbX7Mhrp897Twik29wQseAFAAXQ4TPvN1oswVBHdN74sLPIn9HVfTXtjuQA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.3"
+    "@babel/plugin-syntax-pipeline-operator" "^7.8.3"
+
 "@babel/plugin-proposal-unicode-property-regex@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-unicode-property-regex/-/plugin-proposal-unicode-property-regex-7.8.3.tgz#b646c3adea5f98800c9ab45105ac34d06cd4a47f"
@@ -394,6 +402,13 @@
   integrity sha512-KoK9ErH1MBlCPxV0VANkXW2/dw4vlbGDrFgz8bmUsBGYkFRcbRwMh6cIJubdPrkxRwuGdtCk0v/wPTKbQgBjkg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
+
+"@babel/plugin-syntax-pipeline-operator@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-pipeline-operator/-/plugin-syntax-pipeline-operator-7.8.3.tgz#945d9f13958408e2b1048f6ebe03f370d390aaca"
+  integrity sha512-GhiBvlXZLWeP+MjKaEv33KmiR/QMCv4iCwz1AuuAp7pHxBvOxxyQmIPukh+N/py6PRLYG10bvRCNeenG34QbDA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.3"
 
 "@babel/plugin-syntax-top-level-await@^7.8.3":
   version "7.8.3"
@@ -2019,7 +2034,7 @@ babel-plugin-emotion@^10.0.27:
     find-root "^1.1.0"
     source-map "^0.5.7"
 
-babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.8.0:
+babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.6.1, babel-plugin-macros@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.8.0.tgz#0f958a7cc6556b1e65344465d99111a1e5e10138"
   integrity sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
@@ -7448,6 +7463,13 @@ parallel-transform@^1.1.0:
     cyclist "^1.0.1"
     inherits "^2.0.3"
     readable-stream "^2.1.5"
+
+param.macro@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/param.macro/-/param.macro-3.2.1.tgz#a70cac9c64b11cd19855e435041416c154298a9c"
+  integrity sha512-r9ZNu1NsENXAzdv2iJ7X+njj25/aHISh/RZgBq0f4FHcVyvCvwdcU8OHRAr8XoqRAS0pXyRCZOyGozXnj05V2g==
+  dependencies:
+    babel-plugin-macros "^2.6.1"
 
 parent-module@^1.0.0:
   version "1.0.1"
