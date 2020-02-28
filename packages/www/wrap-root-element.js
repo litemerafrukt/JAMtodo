@@ -1,7 +1,7 @@
 const React = require("react")
 const { ThemeProvider } = require("theme-ui")
 const { deep } = require("@theme-ui/presets")
-const { Provider } = require("./identity-context")
+const Identity = require("./identity-context")
 
 const themeWithTokens = {
   ...deep,
@@ -11,7 +11,7 @@ const themeWithTokens = {
 }
 
 module.exports = ({ element }) => (
-  <Provider>
+  <Identity.Provider>
     <ThemeProvider theme={themeWithTokens}>{element}</ThemeProvider>
-  </Provider>
+  </Identity.Provider>
 )

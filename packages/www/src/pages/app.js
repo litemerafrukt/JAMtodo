@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Flex, Button, Heading } from "theme-ui"
 import { Router } from "@reach/router"
 import { IdentityContext } from "../../identity-context"
-import Dashboard from "./dashboard"
+import Dashboard from "../components/dashboard"
 
 function DashNoUser(props) {
   const { identity: netlifyIdentity } = React.useContext(IdentityContext)
