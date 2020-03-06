@@ -21,7 +21,7 @@ let todoIndex = 0
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
-    todos: () => Object.values(todos)
+    todos: (_parent, _args, { user }) => (user ? Object.values(todos) : [])
   },
   Mutation: {
     addTodo(_, { description }) {
@@ -42,7 +42,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-
+  context: ({ context }) =>
+    context.clientContext.user ? { user: context.clientContext.user.sub } : {},
   // By default, the GraphQL Playground interface and GraphQL introspection
   // is disabled in "production" (i.e. when `process.env.NODE_ENV` is `production`).
   //
